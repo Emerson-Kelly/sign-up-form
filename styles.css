@@ -1,3 +1,65 @@
+/*
 body {
-    background-color: blue;
+    background: url("https://www.hyundai.ie/ioniq6/2-IONIQ6-Design_221206_files/HME_CEBasis_EViz_Location_NY9-TransmissionBluePearl_52910KL310_CAM02.jpg");
+  height: 100vh;
+      background: url("https://www.hyundai.ie/ioniq6/2-IONIQ6-Design_221206_files/HME_CEBasis_EViz_Location_NY9-TransmissionBluePearl_52910KL310_CAM02.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
 }
+*/
+.form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+ max-width: 500px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+  
+  .field {
+    margin: 1px;
+    padding: 1px;
+  }
+  
+  input:invalid {
+    background-color: #ffdddd;
+  }
+  
+  input:valid:not([type="submit"]) {
+    background-color: #ddffdd;
+  }
+  
+  
+  input:required {
+    border-color: #800000;
+  }
+  
+  input:required:invalid {
+    border: 2px solid #c00000;
+  }
+
+
+  input:valid:not([type="submit"]) {
+    border: 2px solid #6c8e6c;
+    outline: none;
+  }
+  
+
+@media only screen and (max-width: 575px) {
+        .row, .form-row {
+            width: inherit;
+            flex-direction: column;
+        }
+  }
