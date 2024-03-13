@@ -50,13 +50,9 @@ input.valid:not([type="submit"]) {
     background-color: #ddffdd;
 }
 
-/* Show error message for invalid fields */
 input.invalid + .error-message {
     display: block;
 }
-
-
-  
 
 @media only screen and (max-width: 575px) {
         .row, .form-row {
