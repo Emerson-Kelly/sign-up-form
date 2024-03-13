@@ -9,6 +9,7 @@ body {
 
 }
 */
+
 .form-content {
     display: flex;
     flex-direction: column;
@@ -21,40 +22,40 @@ form {
  max-width: 500px;
 }
 
+
 .field-group {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-  
-  .field {
-    margin: 1px;
-    padding: 1px;
-  }
-  
-  input:invalid {
+.error-message {
+    display: none;
+    color: red;
+    font-size: 70%;
+    margin: .2rem 0;
+}
+
+input.invalid {
     background-color: #ffdddd;
-  }
-  
-  input:valid:not([type="submit"]) {
-    background-color: #ddffdd;
-  }
-  
-  
-  input:required {
-    border-color: #800000;
-  }
-  
-  input:required:invalid {
     border: 2px solid #c00000;
-  }
+    border-color: #800000;
+}
 
-
-  input:valid:not([type="submit"]) {
+input.valid:not([type="submit"]) {
     border: 2px solid #6c8e6c;
     outline: none;
-  }
+    border-radius: 4px;
+    background-color: #ddffdd;
+}
+
+/* Show error message for invalid fields */
+input.invalid + .error-message {
+    display: block;
+}
+
+
   
 
 @media only screen and (max-width: 575px) {
