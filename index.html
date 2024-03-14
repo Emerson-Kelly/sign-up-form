@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>MyHonda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
     <script src="script.js" defer></script>
-    <div class="form-content">
-        <form id="account" method="post" action="./" class="form" novalidate>
-            <fieldset>
-                <legend>Welcome to MyHyundai</legend>
-                <div class="field-group">
-                    <div class="row form-row">
-                        <div class="col-sm-6">
-                            <label for="fname">First Name:</label><br>
-                            <input type="text" id="fname" name="fname" required>
-                            <span class="error-message">Please enter a valid first name.</span>
+</head>
+<body>
+    <div class="row">
+        <div class="col-lg-6 d-none d-lg-block">
+            <img class="jellybean" src="jellybean.png" alt="jellybean">
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <div class="form-content">
+                <form id="account" method="post" action="./" class="form" novalidate>
+                    <fieldset>
+                        <legend>Welcome to <span style="font-weight: 700;">MyHonda</span></legend>
+                        <div class="field-group">
+                            <div class="row form-row">
+                                <div class="col-md-6">
+                                    <label for="fname">First Name:</label>
+                                    <input class="form-control" type="text" id="fname" name="fname" required>
+                                    <span class="error-message">Please enter a valid first name.</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lname">Last Name:</label>
+                                    <input class="form-control" type="text" id="lname" name="lname" required>
+                                    <span class="error-message">Please enter a valid last name.</span>
+                                </div>
+                            </div>
+                            <div class="row form-row">
+                                <div class="col-md-6">
+                                    <label for="email">Email:</label>
+                                    <input class="form-control" type="email" id="email" name="email" required>
+                                    <span class="error-message">Please enter a valid email address.</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone">Phone Number:</label>
+                                    <input class="form-control" type="tel" id="phone" name="phone">
+                                    <span class="error-message">Please enter a valid phone number.</span>
+                                </div>
+                            </div>
+                            <div class="row form-row">
+                                <div class="col-md-6">
+                                    <label for="password">Password:</label>
+                                    <input class="form-control" type="password" id="password" name="password" required>
+                                    <span class="error-message">Please enter a valid password.</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="confirm-password">Confirm Password:</label>
+                                    <input class="form-control" type="password" id="confirm-password" name="confirm-password" required>
+                                    <span class="error-message">Passwords do not match.</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-                            <label for="lname">Last Name:</label><br>
-                            <input type="text" id="lname" name="lname" required>
-                            <span class="error-message">Please enter a valid last name.</span>
+                        <div class="account-ctas">
+                            <input type="submit" value="Create Account" class="btn btn-primary">
+                            <p class="form-copy">Already have an account? <a style="color: #cc0000;" href="#">Log in</a></p>
                         </div>
-                    </div>
-                    <div class="row form-row">
-                        <div class="col-sm-6">
-                            <label for="email">Email:</label><br>
-                            <input type="email" id="email" name="email" required>
-                            <span class="error-message">Please enter a valid email address.</span>
-                        </div>
-                        <div class="col-sm-6">
-                            <label for="phone">Phone Number:</label><br>
-                            <input type="tel" id="phone" name="phone">
-                            <span class="error-message">Please enter a valid phone number.</span>
-                        </div>
-                    </div>
-                    <div class="row form-row">
-                        <div class="col-sm-6">
-                            <label for="password">Password:</label><br>
-                            <input type="password" id="password" name="password" required>
-                            <span class="error-message">Please enter a valid password.</span>
-                        </div>
-                        <div class="col-sm-6">
-                            <label for="confirm-password">Confirm Password:</label><br>
-                            <input type="password" id="confirm-password" name="confirm-password" required>
-                            <span class="error-message">Passwords do not match.</span>
-                        </div>
-                    </div>
-                    <div class="row form-row">
-                        <div class="col-sm-6">
-                            <input type="submit" value="Submit">
-                        </div>
-                        <div class="col-sm-6"></div>
-                    </div>
-                </div>
-            </fieldset>
-        </form>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
-
 </html>
