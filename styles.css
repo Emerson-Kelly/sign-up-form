@@ -75,16 +75,37 @@ input[type="submit"]:hover {
     background-color: #43484c;
 }
 
+input[type="submit"]:focus {
+    background-color: #43484c;
+}
+
 .account-ctas {
     margin-top: 20px;
     text-align: center;
 }
 
 .error-message {
+    display: none;
     color: red;
     font-size: 14px;
     margin-top: 5px;
-    display: none;
+}
+
+input.invalid {
+    background-color: #ffdddd;
+    border: 2px solid #c00000;
+    border-color: #800000;
+}
+
+input.valid:not([type="submit"]) {
+    border: 2px solid #6c8e6c;
+    outline: none;
+    border-radius: 4px;
+    background-color: #ddffdd;
+}
+
+input.invalid + .error-message {
+    display: block;
 }
 
 @media only screen and (min-width: 768px) {
